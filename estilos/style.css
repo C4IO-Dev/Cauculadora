@@ -14,11 +14,11 @@ body {
     height: 100vh;
 }
 
-section {
+tbody {
     display: flex;
 }
 
-article {
+#resetar, td {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -31,8 +31,4 @@ article {
 
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
-}
-
-.igual{
-    width: 235px;
 }
