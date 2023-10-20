@@ -1,47 +1,49 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cauculadora</title>
+    <title>Calculadora</title>
     <link rel="stylesheet" href="estilos/style.css">
+    <script src="js/script.js" defer></script>
 </head>
-
 <body>
-    <table>
-        <thead>
-            <input type="tel">
-        </thead>
-        <tbody>
-            <tr>
-                <input type="reset" value="C" id="resetar">
-                <td>/</td>
-                <td>x</td>
-            </tr>
-            <tr>
-                <td>7</td>
-                <td>8</td>
-                <td>9</td>
-                <td>-</td>
-            </tr>
-            <tr>
-                <td>4</td>
-                <td>5</td>
-                <td>6</td>
-                <td>+</td>
-            </tr>
-            <tr>
-                <td>1</td>
-                <td>2</td>
-                <td>3</td>
-            </tr>
-            <tr>
-                <td colspan="2">0</td>
-                <td>,</td>
-                <td rowspan="2">=</td>
-            </tr>
-        </tbody>
-    </table>
+    <div class="fundo">
+        <div class="calculadora">
+            <h2>Calculadora</h2>
+            <p id="res"></p>
+            <table>
+                <tr>
+                    <td><button onclick="limpar()">C</button></td>
+                    <td><button onclick="apagar()"><</button></td>
+                    <td><button onclick="divide()">/</button></td>
+                    <td><button onclick="multiplica()">x</button></td>
+                </tr>
+                <tr>
+                    <td><button onclick="setNumber(7)">7</button></td>
+                    <td><button onclick="setNumber(8)">8</button></td>
+                    <td><button onclick="setNumber(9)">9</button></td>
+                    <td><button onclick="subtrai()">-</button></td>
+                </tr>
+                <tr>
+                    <td><button onclick="setNumber(4)">4</button></td>
+                    <td><button onclick="setNumber(5)">5</button></td>
+                    <td><button onclick="setNumber(6)">6</button></td>
+                    <td><button onclick="adição()">+</button></td>
+                </tr>
+                <tr>
+                    <td><button onclick="setNumber(1)">1</button></td>
+                    <td><button onclick="setNumber(2)">2</button></td>
+                    <td><button onclick="setNumber(3)">3</button></td>
+                    <td rowspan="2"><button onclick="calcular()" style="height: 106px;">=</button></td>
+                </tr>
+                <tr>
+                    <td colspan="2"><button onclick="setNumber(0)" style="width: 106px;">0</button></td>
+                    <td><button onclick="ponto()">.</button></td>
+                </tr>
+            </table>
+        </div>
+    </div>
 </body>
 </html>
