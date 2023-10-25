@@ -59,6 +59,6 @@ table button:hover {
     background-color: #000000;
 }
 
-table button:hover::after{
+table button::after{
     background-color: #383838;
 }
