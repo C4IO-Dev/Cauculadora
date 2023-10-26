@@ -22,16 +22,6 @@ document.querySelectorAll("button").forEach(button => {
     });
 });
 
-
-function handleTouchStart() {
-    this.style.backgroundColor = "#383838";
-}
-
-const buttons = document.querySelectorAll("button");
-buttons.forEach(button => {
-    button.addEventListener("touchstart", handleTouchStart);
-});
-
 function updateResult() {
     const resultElement = document.getElementById('res');
     resultElement.textContent = currentInput;
