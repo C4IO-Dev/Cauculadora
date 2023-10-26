@@ -60,15 +60,3 @@ table button:hover,
 table button:active {
     background-color: #000000;
 }
-
-table button::after {
-    background-color: #383838;
-}
-
-table button {
-    touch-action: manipulation;
-}
-
-table button:active {
-    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
-}

@@ -2,6 +2,20 @@ let currentInput = '';
 let previousInput = '';
 let operation = '';
 
+document.querySelectorAll("button").forEach(button => {
+    button.addEventListener("mouseenter", () => {
+        button.classList.add("hover");
+    });
+
+    button.addEventListener("mouseleave", () => {
+        button.classList.remove("hover");
+    });
+
+    button.addEventListener("touchstart", () => {
+        button.classList.remove("hover");
+    });
+});
+
 function handleTouchStart() {
     this.style.backgroundColor = "#383838";
 }
