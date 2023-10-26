@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,6 +9,7 @@
     <link rel="stylesheet" href="estilos/style.css">
     <script src="js/script.js"></script>
 </head>
+
 <body>
     <div class="fundo">
         <div class="calculadora">
@@ -16,7 +18,9 @@
             <table>
                 <tr>
                     <td><button onclick="limpar()">C</button></td>
-                    <td><button onclick="apagar()"><</button></td>
+                    <td><button onclick="apagar()">
+                            << /button>
+                    </td>
                     <td><button onclick="divide()">/</button></td>
                     <td><button onclick="multiplica()">x</button></td>
                 </tr>
@@ -46,5 +50,27 @@
         </div>
     </div>
 
+    <script>
+        // JavaScript
+        const buttons = document.querySelectorAll("button");
+
+        buttons.forEach(button => {
+            button.addEventListener("touchstart", function () {
+                this.classList.add("hover");
+            });
+
+            // Para dispositivos desktop
+            button.addEventListener("mouseenter", function () {
+                this.classList.add("hover");
+            });
+
+            button.addEventListener("mouseleave", function () {
+                this.classList.remove("hover");
+            });
+        });
+
+    </script>
+
 </body>
+
 </html>
