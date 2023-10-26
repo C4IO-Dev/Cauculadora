@@ -2,7 +2,17 @@ let currentInput = '';
 let previousInput = '';
 let operation = '';
 
+// JavaScript
 document.querySelectorAll("button").forEach(button => {
+    // Função para lidar com o evento touchstart
+    button.addEventListener("touchstart", () => {
+        button.classList.add("hover"); // Adiciona a classe hover temporariamente
+        setTimeout(() => {
+            button.classList.remove("hover"); // Remove a classe hover após um pequeno atraso
+        }, 100);
+    });
+
+    // Eventos mouseenter e mouseleave continuam para dispositivos desktop
     button.addEventListener("mouseenter", () => {
         button.classList.add("hover");
     });
@@ -10,11 +20,8 @@ document.querySelectorAll("button").forEach(button => {
     button.addEventListener("mouseleave", () => {
         button.classList.remove("hover");
     });
-
-    button.addEventListener("touchstart", () => {
-        button.classList.remove("hover");
-    });
 });
+
 
 function handleTouchStart() {
     this.style.backgroundColor = "#383838";
