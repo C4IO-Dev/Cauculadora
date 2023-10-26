@@ -53,10 +53,8 @@ table button {
     border: none;
     margin: 3px;
     border-radius: 50px;
-    transition: background-color 0.2s;
 }
 
-table button:hover,
-table button:active {
+table button:hover {
     background-color: #000000;
 }

@@ -11,15 +11,14 @@
 </head>
 
 <body>
-    <div class="fundo">
-        <div class="calculadora">
+    <main class="fundo">
+        <article class="calculadora">
             <h2>Calculadora</h2>
             <p id="res"></p>
             <table>
                 <tr>
                     <td><button onclick="limpar()">C</button></td>
-                    <td><button onclick="apagar()">
-                            << /button>
+                    <td><button onclick="apagar()"><</button>
                     </td>
                     <td><button onclick="divide()">/</button></td>
                     <td><button onclick="multiplica()">x</button></td>
@@ -47,30 +46,8 @@
                     <td><button onclick="ponto()">.</button></td>
                 </tr>
             </table>
-        </div>
-    </div>
-
-    <script>
-        // JavaScript
-        const buttons = document.querySelectorAll("button");
-
-        buttons.forEach(button => {
-            button.addEventListener("touchstart", function () {
-                this.classList.add("hover");
-            });
-
-            // Para dispositivos desktop
-            button.addEventListener("mouseenter", function () {
-                this.classList.add("hover");
-            });
-
-            button.addEventListener("mouseleave", function () {
-                this.classList.remove("hover");
-            });
-        });
-
-    </script>
-
+        </article>
+    </main>
 </body>
 
 </html>
